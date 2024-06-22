@@ -29,97 +29,21 @@
   </div>
 {% endblock banner-slider  %}
 {% block main-content  %}
-<div class='row'>
+<div class='row' style='width:100%'>
+    {% for product in products  %}
     <div class='col-lg-3'>
-        <img class='thumbnail' src="{% static 'app/images/dienthoai/dt1.jpg' %}">
-        <div class='box-element product text-center'>
-            <h6><strong>SamSung Galaxy S23 Ultra</strong></h6>
+        <img class='thumbnail'style='width:100%' src="{{product.ImageURL}}">
+        <div class='box-element product text-center' style='width:100%'>
+            <h6><strong>{{product.name}}</strong></h6>
             <hr>
 
-            <button class='btn btn-outline-secondary add-btn'>Add to cart</button>
-            <a class='btn btn-outline-success' href='#'>View</a>
-            <h4 style='display:inline-block; float:right'><strong>2.000 VNĐ</strong></h4>
+            <button class='btn btn-outline-secondary add-btn' style='width:100%'>Add to cart</button>
+            <a class='btn btn-outline-success ' style='width:100%' href='#'>View</a>
+            <h4 class='text-center'><strong>{{product.price |floatformat:6}} VNĐ</strong></h4>
         </div>
     </div>
-    <div class='col-lg-3'>
-        <img class='thumbnail' src="{% static 'app/images/dienthoai/dt1.jpg' %}">
-        <div class='box-element product text-center'>
-            <h6><strong>SamSung Galaxy S23 Ultra</strong></h6>
-            <hr>
-
-            <button class='btn btn-outline-secondary add-btn'>Add to cart</button>
-            <a class='btn btn-outline-success' href='#'>View</a>
-            <h4 style='display:inline-block; float:right'><strong>2.000 VNĐ</strong></h4>
-        </div>
-    </div>
-    <div class='col-lg-3'>
-        <img class='thumbnail' src="{% static 'app/images/dienthoai/dt1.jpg' %}">
-        <div class='box-element product text-center'>
-            <h6><strong>SamSung Galaxy S23 Ultra</strong></h6>
-            <hr>
-
-            <button class='btn btn-outline-secondary add-btn'>Add to cart</button>
-            <a class='btn btn-outline-success' href='#'>View</a>
-            <h4 style='display:inline-block; float:right'><strong>2.000 VNĐ</strong></h4>
-        </div>
-    </div>
-    <div class='col-lg-3'>
-        <img class='thumbnail' src="{% static 'app/images/dienthoai/dt1.jpg' %}">
-        <div class='box-element product text-center'>
-            <h6><strong>SamSung Galaxy S23 Ultra</strong></h6>
-            <hr>
-
-            <button class='btn btn-outline-secondary add-btn'>Add to cart</button>
-            <a class='btn btn-outline-success' href='#'>View</a>
-            <h4 style='display:inline-block; float:right'><strong>2.000 VNĐ</strong></h4>
-        </div>
-    </div>
-</div>
-<div class='row'>
-    <div class='col-lg-3'>
-        <img class='thumbnail' src="{% static 'app/images/dienthoai/dt1.jpg' %}">
-        <div class='box-element product text-center'>
-            <h6><strong>SamSung Galaxy S23 Ultra</strong></h6>
-            <hr>
-
-            <button class='btn btn-outline-secondary add-btn'>Add to cart</button>
-            <a class='btn btn-outline-success' href='#'>View</a>
-            <h4 style='display:inline-block; float:right'><strong>2.000 VNĐ</strong></h4>
-        </div>
-    </div>
-    <div class='col-lg-3'>
-        <img class='thumbnail' src="{% static 'app/images/dienthoai/dt1.jpg' %}">
-        <div class='box-element product text-center'>
-            <h6><strong>SamSung Galaxy S23 Ultra</strong></h6>
-            <hr>
-
-            <button class='btn btn-outline-secondary add-btn'>Add to cart</button>
-            <a class='btn btn-outline-success' href='#'>View</a>
-            <h4 style='display:inline-block; float:right'><strong>2.000 VNĐ</strong></h4>
-        </div>
-    </div>
-    <div class='col-lg-3'>
-        <img class='thumbnail' src="{% static 'app/images/dienthoai/dt1.jpg' %}">
-        <div class='box-element product text-center'>
-            <h6><strong>SamSung Galaxy S23 Ultra</strong></h6>
-            <hr>
-
-            <button class='btn btn-outline-secondary add-btn'>Add to cart</button>
-            <a class='btn btn-outline-success' href='#'>View</a>
-            <h4 style='display:inline-block; float:right'><strong>2.000 VNĐ</strong></h4>
-        </div>
-    </div>
-    <div class='col-lg-3'>
-        <img class='thumbnail' src="{% static 'app/images/dienthoai/dt1.jpg' %}">
-        <div class='box-element product text-center'>
-            <h6><strong>SamSung Galaxy S23 Ultra</strong></h6>
-            <hr>
-
-            <button class='btn btn-outline-secondary add-btn'>Add to cart</button>
-            <a class='btn btn-outline-success' href='#'>View</a>
-            <h4 style='display:inline-block; float:right'><strong>2.000 VNĐ</strong></h4>
-        </div>
-    </div>
+    {% endfor %}
+   
 </div>
     <br><br><br>
 {% endblock main-content  %}
